@@ -19,7 +19,44 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        
+        tasks: [
+            {
+                text: "Learn HTML",
+                done: false,
+            },
+            {
+                text: "Learn CSS",
+                done: false,
+            },
+            {
+                text: "Learn Bootstrap",
+                done: false,
+            },
+            {
+                text: "Learn JavaScript",
+                done: false,
+            },
+            {
+                text: "Learn Vue.JS",
+                done: false,
+            },
+            {
+                text: "Learn PHP",
+                done: false,
+            },
+            {
+                text: "Learn Laravel",
+                done: false,
+            },
+            {
+                text: "Learn MySQL",
+                done: false,
+            },
+            {
+                text: "Learn React",
+                done: false,
+            },
+        ],
       }
     },
     methods: {

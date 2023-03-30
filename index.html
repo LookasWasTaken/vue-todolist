@@ -20,7 +20,7 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>ToDo List</title>
+    <title>Vue ToDo List</title>
 </head>
 
 <body>
@@ -28,12 +28,16 @@
     <div id="app">
 
         <header id="app_header">
-
+            <h1>Vue ToDo List</h1>
         </header>
         <!-- /#app_header -->
 
-        <main id="app_main" class="text-center">
-
+        <main id="app_main">
+            <div class="tasks">
+                <ul>
+                    <li :class="{'text-decoration-line-through' : task.done}" v-for="task in tasks">{{task.text}}</li>
+                </ul>
+            </div>
         </main>
         <!-- /#app_main -->
 
