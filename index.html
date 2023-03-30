@@ -40,7 +40,7 @@
             </div>
             <div class="tasks">
                 <ul>
-                    <li class="list-unstyled" :class="{'text-decoration-line-through' : task.done}" v-for="(task, index) in tasks"><i class="fa-solid fa-circle fa-fw"></i><span @click="toggledAsDone(index)">{{task.text}}</span><i @click="removeListItem" class="fa-solid fa-square-xmark fa-fw"></i></li>
+                    <li class="list-unstyled" :class="{'text-decoration-line-through' : task.done}" v-for="(task, index) in tasks"><i class="fa-solid fa-circle fa-fw"></i><span @click="toggledAsDone(index)">{{task.text}}</span><i @click="removeListItem(index)" class="fa-solid fa-square-xmark fa-fw"></i></li>
                 </ul>
             </div>
         </main>
