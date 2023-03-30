@@ -34,8 +34,9 @@
 
         <main id="app_main">
             <div class="add_task">
-                <input type="text" @keyup.enter="addListItem" v-model="newTask">
+                <input type="text" @keyup.enter="addListItem" v-model="newTask" placeholder="Insert something to do">
                 <button @click="addListItem">Aggiungi</button>
+                <div v-if="warning" class="text-danger">{{error}}</div>
             </div>
             <div class="tasks">
                 <ul>

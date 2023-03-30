@@ -19,6 +19,8 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        warning: false,
+        error: "Insert at least 3 char",
         newTask: "",
         tasks: [
             {
@@ -65,8 +67,14 @@ const { createApp } = Vue
         this.tasks.splice(index, 1)
       },
       addListItem(){
-        this.tasks.push({text : this.newTask, done : false})
-        this.newTask = "";
+        if (this.newTask.length >= 3) {
+            this.tasks.push({text : this.newTask, done : false})
+            this.newTask = "";
+            this.warning = false;
+        } else {
+            this.warning = true;
+        }
+        
       },
       toggledAsDone(index){
         this.tasks[index].done = !this.tasks[index].done
