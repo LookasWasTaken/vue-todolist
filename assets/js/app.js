@@ -19,6 +19,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        newTask: "",
         tasks: [
             {
                 text: "Learn HTML",
@@ -63,5 +64,12 @@ const { createApp } = Vue
       removeListItem(index){
         this.tasks.splice(index, 1)
       },
+      addListItem(){
+        this.tasks.push({text : this.newTask, done : false})
+        this.newTask = "";
+      },
+      toggledAsDone(index){
+        this.tasks[index].done = !this.tasks[index].done
+      }
     }
   }).mount('#app')
