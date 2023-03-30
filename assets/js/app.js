@@ -60,6 +60,8 @@ const { createApp } = Vue
       }
     },
     methods: {
-      
+      removeListItem(index){
+        this.tasks.splice(index, 1)
+      },
     }
   }).mount('#app')
